@@ -2,12 +2,20 @@ import React from 'react';
 import { Button, Navbar, Nav, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import background from '../Background.webp';
+import styled from 'styled-components';
+
+const Styles = styled.div`
+h3, p {
+    color: black;
+}
+`;
 
 function Slider() {
     return (
         <>
+        <Styles>
             <Carousel>
-                <Carousel.Item style={{ 'height': '600px' }}>
+                <Carousel.Item style={{ 'height': '600px'}}>
                     <img
                         className="d-block w-100"
                         src={background}
@@ -41,7 +49,7 @@ function Slider() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-
+            </Styles>
         </>
     )
 }
